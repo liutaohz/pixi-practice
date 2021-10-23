@@ -1,0 +1,21 @@
+{
+  "name": "pixi-practice",
+  "version": "0.0.0",
+  "author": "liutao",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "antd": "^4.16.13",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.0",
+    "less": "^4.1.2",
+    "vite": "^2.6.4"
+  }
+}
