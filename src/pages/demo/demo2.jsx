@@ -1,14 +1,17 @@
 
 import React, { useEffect, useState } from 'react';
 import './index.less';
-const HomePage = (props) => {
+
+const Demo2 = (props) => {
 
   useEffect(() => {
   }, []);
 
   return (
-    <div className='home-page'>HomePage</div>
+    <div className={'demo2-page'}>
+      demo2-page
+    </div>
   );
 }
 
-export default HomePage;
+export default Demo2;
