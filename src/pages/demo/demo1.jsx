@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import * as PIXI from 'pixi.js'
 import './index.less';
 
+const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
 const Demo1 = () => {
   const [pixiObj, setPixiObj] = useState(null);
   const canvasDemo1 = useRef();
@@ -25,12 +26,13 @@ const Demo1 = () => {
       canvasDemo1.current.appendChild(app.view);
     }
     case1(app);
-    case2(app);
+    // case2(app);
+    case3(app);
   }
   // 创建图片并旋转
   const case1 = (app) => {
     // 创建一个图片精灵
-    const avatar = new PIXI.Sprite.from('https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo/wifi.png');
+    const avatar = new PIXI.Sprite.from(`${urlPr}/wifi.png`);
     avatar.scale.set(0.5, 0.5);
     avatar.x = 150;
     avatar.y = 150;
@@ -46,11 +48,11 @@ const Demo1 = () => {
   // loader 多张图片
   const case2 = (app) => {
     // 创建一个图片精灵
-    app.loader.add("https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo/tool.png")
+    app.loader.add(`${urlPr}/tool.png`)
     .load(setup);
     function setup() {
       let testPic = new PIXI.Sprite(
-        app.loader.resources["https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo/tool.png"].texture
+        app.loader.resources[`${urlPr}/tool.png`].texture
       );
       testPic.scale.set(0.5, 0.5);
       // testPic.x = 300;
@@ -63,7 +65,27 @@ const Demo1 = () => {
   }
   // 使用雪碧图
   const case3 = (app) => {
-    // TODO
+    // 创建一个图片精灵
+    // app.loader.add("/images/test1.json")
+    //   .load(setup);
+    // function setup() {
+    //   let id = app.loader.resources["/images/test1.json"].textures;
+    app.loader.add(`${urlPr}/test1.json`)
+      .load(setup);
+    function setup() {
+      let id = app.loader.resources[`${urlPr}/test1.json`].textures;
+      let testPic = new PIXI.Sprite(id["GitHub.png"]);
+      testPic.scale.set(0.5, 0.5);
+      testPic.position.set(400, 100)
+      testPic.anchor.set(0.5, 0.5)
+      app.stage.addChild(testPic);
+
+      let testPic2 = new PIXI.Sprite(id["微信.png"]);
+      testPic2.scale.set(0.5, 0.5);
+      testPic2.position.set(400, 300)
+      testPic2.anchor.set(0.5, 0.5)
+      app.stage.addChild(testPic2);
+    }
   }
   return (
     <div className={'demo1-page'}>

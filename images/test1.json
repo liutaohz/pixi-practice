@@ -1,0 +1,116 @@
+{"frames": {
+
+"36K.jpeg":
+{
+	"frame": {"x":1,"y":1,"w":400,"h":400},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":400},
+	"sourceSize": {"w":400,"h":400}
+},
+"Bing.png":
+{
+	"frame": {"x":380,"y":1191,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"GitHub.png":
+{
+	"frame": {"x":200,"y":1191,"w":178,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":11,"w":178,"h":174},
+	"sourceSize": {"w":200,"h":200}
+},
+"gitlab.png":
+{
+	"frame": {"x":203,"y":807,"w":201,"h":189},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":11,"w":201,"h":189},
+	"sourceSize": {"w":201,"h":200}
+},
+"哔哩哔哩.png":
+{
+	"frame": {"x":1,"y":403,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+"头条.png":
+{
+	"frame": {"x":203,"y":403,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+"微信.png":
+{
+	"frame": {"x":203,"y":998,"w":191,"h":191},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":5,"w":191,"h":191},
+	"sourceSize": {"w":200,"h":200}
+},
+"微博.png":
+{
+	"frame": {"x":1,"y":1189,"w":197,"h":158},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":23,"w":197,"h":158},
+	"sourceSize": {"w":200,"h":200}
+},
+"支 付 宝.png":
+{
+	"frame": {"x":1,"y":605,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+"澎湃网.png":
+{
+	"frame": {"x":403,"y":1,"w":160,"h":101},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":37,"w":160,"h":101},
+	"sourceSize": {"w":200,"h":200}
+},
+"百度.png":
+{
+	"frame": {"x":203,"y":605,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+"知乎.png":
+{
+	"frame": {"x":1,"y":807,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+"谷歌.png":
+{
+	"frame": {"x":1,"y":1009,"w":178,"h":178},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":11,"w":178,"h":178},
+	"sourceSize": {"w":200,"h":200}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "test1.png",
+	"format": "RGBA8888",
+	"size": {"w":509,"h":1366},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:9b3bb1a20c1c3e5f53806785379a68a1:5755d82a246bcbcd438952397743f58e:9c544c7c5c4d6dc1ccdf4b7452c3dea5$"
+}
+}
