@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import * as PIXI from 'pixi.js'
+import * as PIXI from 'pixi.js';
 import './index.less';
 
 const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
@@ -85,6 +85,17 @@ const Demo1 = () => {
       testPic2.position.set(400, 300)
       testPic2.anchor.set(0.5, 0.5)
       app.stage.addChild(testPic2);
+
+      app.ticker.add(delta => gameLoop(delta));
+      function gameLoop(delta){
+        testPic2.vx = 1;
+        testPic2.vy = 1;
+        //Move the cat 1 pixel
+        if (testPic2.x < 500) {
+          testPic2.x += testPic2.vx;
+          testPic2.y +=  testPic2.vy;
+        }
+      }
     }
   }
   return (
