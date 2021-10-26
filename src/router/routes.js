@@ -6,6 +6,7 @@ const TestPage = lazy(() => import('../pages/test'));
 const Demo1 = lazy(() => import('../pages/demo/demo1'));
 const Demo2 = lazy(() => import('../pages/demo/demo2'));
 const Demo3 = lazy(() => import('../pages/demo/demo3'));
+const Demo4 = lazy(() => import('../pages/demo/demo4'));
 const prefixStr = '/pixi-practice';
 export const routesArr = [
 	{
@@ -42,6 +43,13 @@ export const routesArr = [
 			title:'demo3'
 		},
 		component: Demo3
+	},
+	{
+		path: `${prefixStr}/demo4`,
+		meta: {
+			title:'demo4'
+		},
+		component: Demo4
 	},
 	{
 		path: `${prefixStr}/test`,
