@@ -23,7 +23,8 @@ const Demo3 = () => {
     if (!pixiObj) {
       canvasDemo3.current.appendChild(app.view);
     }
-    case1(app);
+    // case1(app);
+    case2(app);
   }
   // 平铺背景图
   const case1 = (app) => {
@@ -52,6 +53,20 @@ const Demo3 = () => {
       }
       direction.x += direction.vx;
       direction.y += direction.vy
+    })
+  }
+  // 平铺背景图
+  const case2 = (app) => {
+    const wood = PIXI.Texture.from('/images/wood.jpg')
+    const tilingSprite1 = new PIXI.TilingSprite(wood, app.screen.width, app.screen.height)
+    app.stage.addChild(tilingSprite1)
+    const ground = PIXI.Texture.from('/images/ground.png')
+    const tilingSprite2 = new PIXI.TilingSprite(ground, app.screen.width, 100)
+    tilingSprite2.y = 400;
+    app.stage.addChild(tilingSprite2)
+    app.ticker.add(() => {
+      tilingSprite1.tilePosition.x -= 1;
+      tilingSprite2.tilePosition.x -= 3;
     })
   }
   return (
