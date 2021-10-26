@@ -13,7 +13,7 @@ const Demo3 = () => {
   const initFn = () => {
     const app = new PIXI.Application({
       width: 1000,  // default: 800 宽度
-      height: 500,  // default: 800 宽度
+      height: 600,  // default: 800 宽度
       antialias: true, //  default: false 反锯齿  使得字体的边界和图形更加平滑
       transparent: false, // default: false 透明度
       resolution: 1, // default: 1 分辨率  不同屏幕和分辨率适配
@@ -58,11 +58,11 @@ const Demo3 = () => {
   // 平铺背景图
   const case2 = (app) => {
     const wood = PIXI.Texture.from('/images/wood.jpg')
-    const tilingSprite1 = new PIXI.TilingSprite(wood, app.screen.width, app.screen.height)
+    const tilingSprite1 = new PIXI.TilingSprite(wood, app.screen.width, 500)
     app.stage.addChild(tilingSprite1)
     const ground = PIXI.Texture.from('/images/ground.png')
-    const tilingSprite2 = new PIXI.TilingSprite(ground, app.screen.width, 100)
-    tilingSprite2.y = 400;
+    const tilingSprite2 = new PIXI.TilingSprite(ground, app.screen.width, 150)
+    tilingSprite2.y = 450;
     app.stage.addChild(tilingSprite2)
     app.ticker.add(() => {
       tilingSprite1.tilePosition.x -= 1;
