@@ -20,6 +20,7 @@ const Routers = () => {
           {routesArr.map((route, i) => {
             return <RouteTab key={i} {...route} />
           })}
+          <Redirect from="/pixi-practice/" exact to="/pixi-practice/home" />
           <Redirect from="/" exact to="/pixi-practice/home" />
           <Redirect to="/pixi-practice/error/404" />
 				</Switch>

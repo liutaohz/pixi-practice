@@ -58,6 +58,13 @@ export const routesArr = [
 		},
 		component: TestPage
 	},
+	{
+		path: `/`,
+		meta: {
+			title:'Pixi.js练习'
+		},
+		component: Home
+	},
 ];
 
 export default routesArr;
