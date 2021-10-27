@@ -8,6 +8,15 @@
     "serve": "vite preview",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://easysimple.github.io/pixi-practice/",
+  "bugs": "https://github.com/EasySimple/pixi-practice/issues",
+  "keyword": "pixi.js,pixi.js小Demo,react,vite",
+  "keywords": [
+    "react",
+    "pixi.js",
+    "vite",
+    "antd"
+  ],
   "dependencies": {
     "antd": "^4.16.13",
     "pixi.js": "^6.1.3",
