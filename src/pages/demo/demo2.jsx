@@ -59,7 +59,7 @@ const Demo2 = (props) => {
       dropShadowAngle: Math.PI / 6,
       dropShadowDistance: 6,
     });
-    let message = new PIXI.Text("Hello Pixi!",style);
+    let message = new PIXI.Text("Hello Pixi test!", style);
     app.stage.addChild(message);
     message.position.set(24, 24);
 
