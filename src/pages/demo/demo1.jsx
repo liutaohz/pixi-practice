@@ -4,10 +4,12 @@ import * as PIXI from 'pixi.js';
 import './index.less';
 
 const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
-const Demo1 = () => {
+const Demo1 = (props) => {
   const [pixiObj, setPixiObj] = useState(null);
   const canvasDemo1 = useRef();
   useEffect(() => {
+    window.document.title = props.meta.title;
+    // window.document.title = props.meta.title;
     initFn();
   }, []);
   const initFn = () => {
@@ -99,9 +101,9 @@ const Demo1 = () => {
     }
   }
   return (
-    <div className={'demo1-page'}>
-      <div className={'demo1-page-title'}>demo1-page</div>
-      <div className="demo1-canvas" ref={canvasDemo1} id="demo1-area"></div>
+    <div className={'demo-page'}>
+      <div className={'demo-page-title'}>{props.meta.title}</div>
+      <div className="demo-canvas" ref={canvasDemo1}></div>
     </div>
   );
 }

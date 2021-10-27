@@ -26,28 +26,28 @@ export const routesArr = [
 	{
 		path: `${prefixStr}/demo1`,
 		meta: {
-			title:'demo1'
+			title:'基本使用，Application,loader及精灵图'
 		},
 		component: Demo1
 	},
 	{
 		path: `${prefixStr}/demo2`,
 		meta: {
-			title:'demo2'
+			title:'图形绘制，键盘交互'
 		},
 		component: Demo2
 	},
 	{
 		path: `${prefixStr}/demo3`,
 		meta: {
-			title:'demo3'
+			title:'平铺纹理，伪3D效果'
 		},
 		component: Demo3
 	},
 	{
 		path: `${prefixStr}/demo4`,
 		meta: {
-			title:'demo4'
+			title:'逐帧动画，分组动作'
 		},
 		component: Demo4
 	},

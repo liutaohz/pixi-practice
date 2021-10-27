@@ -9,6 +9,7 @@ const Demo2 = (props) => {
   const [pixiObj, setPixiObj] = useState(null);
   const canvasDemo2 = useRef();
   useEffect(() => {
+    window.document.title = props.meta.title;
     initFn();
   }, []);
   const initFn = () => {
@@ -239,9 +240,9 @@ const Demo2 = (props) => {
     return hit;
   };
   return (
-    <div className={'demo2-page'}>
-      <div className={'demo2-page-title'}>demo2-page</div>
-      <div className="demo2-canvas" ref={canvasDemo2} id="demo2-area"></div>
+    <div className={'demo-page'}>
+      <div className={'demo-page-title'}>{props.meta.title}</div>
+      <div className="demo-canvas" ref={canvasDemo2}></div>
     </div>
   );
 }

@@ -4,10 +4,11 @@ import * as PIXI from 'pixi.js';
 import './index.less';
 
 const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
-const Demo3 = () => {
+const Demo3 = (props) => {
   const [pixiObj, setPixiObj] = useState(null);
   const canvasDemo3 = useRef();
   useEffect(() => {
+    window.document.title = props.meta.title;
     initFn();
   }, []);
   const initFn = () => {
@@ -23,8 +24,8 @@ const Demo3 = () => {
     if (!pixiObj) {
       canvasDemo3.current.appendChild(app.view);
     }
-    // case1(app);
-    case2(app);
+    case1(app);
+    // case2(app);
   }
   // 平铺背景图
   const case1 = (app) => {
@@ -55,7 +56,7 @@ const Demo3 = () => {
       direction.y += direction.vy
     })
   }
-  // 平铺背景图
+  // 多平铺背景图，伪3D效果
   const case2 = (app) => {
     const wood = PIXI.Texture.from('/images/wood.jpg')
     const tilingSprite1 = new PIXI.TilingSprite(wood, app.screen.width, 500)
@@ -70,9 +71,9 @@ const Demo3 = () => {
     })
   }
   return (
-    <div className={'demo3-page'}>
-      <div className={'demo3-page-title'}>demo3-page</div>
-      <div className="demo3-canvas" ref={canvasDemo3} id="demo3-area"></div>
+    <div className={'demo-page'}>
+      <div className={'demo-page-title'}>{props.meta.title}</div>
+      <div className="demo-canvas" ref={canvasDemo3}></div>
     </div>
   );
 }
