@@ -1,5 +1,6 @@
 # pixi-practice
-个人pixi.js学，手写小case
+个人pixi.js学，手写小case;
+如果对你有所启发，欢迎给个Star⭐
 
 ### 项目启动
 - npm i

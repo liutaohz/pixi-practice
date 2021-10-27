@@ -12,7 +12,7 @@ export const routesArr = [
 	{
 		path: `${prefixStr}/home`,
 		meta: {
-			title:'home'
+			title:'Pixi.js练习'
 		},
 		component: Home
 	},
