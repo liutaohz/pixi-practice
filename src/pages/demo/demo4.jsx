@@ -36,6 +36,7 @@ const Demo4 = (props) => {
       .load(setup);
     function setup() {
       // let ids = app.loader.resources[`/images/testMan.json`].textures;
+      // TODO 一些可以使用循环创建，或者定义精灵对象状态组
       const ids = app.loader.resources[`${urlPr}/testMan.json`].textures;
       let pixie1 = new PIXI.AnimatedSprite(countImgList(ids,0,3));  // 向下
       pixie1.position.set(100, 100)

@@ -32,9 +32,9 @@ const Demo1 = (props) => {
     if (!pixiObj) {
       canvasDemo1.current.appendChild(app.view);
     }
-    case1(app);
+    // case1(app);
     // case2(app);
-    // case3(app);
+    case3(app);
   }
   const initFn2 = () => {
     const app = new PIXI.Application({
@@ -115,9 +115,9 @@ const Demo1 = (props) => {
         testPic2.vx = 1;
         testPic2.vy = 1;
         //Move the cat 1 pixel
-        if (testPic2.x < 500) {
+        if (testPic2.y > 100) {
           testPic2.x += testPic2.vx;
-          testPic2.y +=  testPic2.vy;
+          testPic2.y -=  testPic2.vy;
         }
       }
     }

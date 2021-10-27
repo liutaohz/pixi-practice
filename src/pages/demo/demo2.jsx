@@ -136,12 +136,10 @@ const Demo2 = (props) => {
       direction.y += direction.vy
       // 碰撞检测
       if (hitTestRectangle(direction, rectangle)) {
-        message.text = "hit!";
+        message.text = "碰撞中💥";
         rectangle.tint = 0xff3300;
       } else {
-        //if there's no collision, reset the message
-        //text and the box's color
-        message.text = "No collision...";
+        message.text = "没碰到";
         rectangle.tint = 0xccff99;
       }
     }
