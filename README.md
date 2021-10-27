@@ -1,16 +1,16 @@
 # pixi-practice
 个人pixi.js学，手写小case
 
-## 项目启动
+### 项目启动
 - npm i
 - npm run dev
 
-## 项目依赖版本
+### 项目依赖版本
 - "antd": "^4.16.13",
 - "pixi.js": "^6.1.3",
 - "react": "^17.0.0",
 
-## 参考链接
+### 参考链接
 官方文档
 - [standard-version](https://pixijs.com/)
 - [Pixi.js中文网](https://pixijs.huashengweilai.com/)
