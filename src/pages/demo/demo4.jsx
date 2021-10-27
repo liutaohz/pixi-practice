@@ -75,7 +75,9 @@ const Demo4 = (props) => {
   }
   return (
     <div className={'demo-page'}>
-      <div className={'demo-page-title'}><Button className="back-home" onClick={backHome}>返回</Button>{props.meta.title}</div>
+      <div className={'demo-page-title'}>
+        {props.meta.title} <Button className="back-home" onClick={backHome}>返回首页</Button>
+      </div>
       <div className="demo-canvas" ref={canvasDemo4}></div>
     </div>
   );
