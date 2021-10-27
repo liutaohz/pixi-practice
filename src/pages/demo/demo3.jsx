@@ -25,8 +25,8 @@ const Demo3 = (props) => {
     if (!pixiObj) {
       canvasDemo3.current.appendChild(app.view);
     }
-    // case1(app);
-    case2(app);
+    case1(app);
+    // case2(app);
   }
   // 平铺背景图
   const case1 = (app) => {

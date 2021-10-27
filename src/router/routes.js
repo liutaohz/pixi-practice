@@ -59,7 +59,7 @@ export const routesArr = [
 		component: TestPage
 	},
 	{
-		path: `${prefixStr}/`,
+		path: `${prefixStr}`,
 		meta: {
 			title:'Pixi.js练习'
 		},
