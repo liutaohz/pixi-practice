@@ -31,8 +31,8 @@ const Demo1 = (props) => {
     if (!pixiObj) {
       canvasDemo1.current.appendChild(app.view);
     }
-    case1(app);
-    // case2(app);
+    // case1(app);
+    case2(app);
     // case3(app);
   }
   // 创建图片并旋转
