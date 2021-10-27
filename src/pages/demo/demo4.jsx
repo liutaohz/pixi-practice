@@ -228,6 +228,7 @@ const Demo4 = (props) => {
       <div className={'demo-page-title'}>
         {props.meta.title} <Button className="back-home" onClick={backHome}>返回首页</Button>
       </div>
+      <div className="demo-page-desc">请按键盘上下左右键控制</div>
       <div className="demo-canvas" ref={canvasDemo4}></div>
     </div>
   );

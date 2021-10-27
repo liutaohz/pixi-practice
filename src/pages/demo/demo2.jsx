@@ -135,13 +135,13 @@ const Demo2 = (props) => {
       direction.x += direction.vx;
       direction.y += direction.vy
       // 碰撞检测
-      if (hitTestRectangle(direction, rectangle)) {
-        message.text = "碰撞中💥";
-        rectangle.tint = 0xff3300;
-      } else {
-        message.text = "没碰到";
-        rectangle.tint = 0xccff99;
-      }
+      // if (hitTestRectangle(direction, rectangle)) {
+      //   message.text = "碰撞中💥";
+      //   rectangle.tint = 0xff3300;
+      // } else {
+      //   message.text = "没碰到";
+      //   rectangle.tint = 0xccff99;
+      // }
     }
   }
   const keyboard=(value)=>{
@@ -246,6 +246,7 @@ const Demo2 = (props) => {
       <div className={'demo-page-title'}>
         {props.meta.title} <Button className="back-home" onClick={backHome}>返回首页</Button>
       </div>
+      <div className="demo-page-desc">请按键盘上下左右键控制</div>
       <div className="demo-canvas" ref={canvasDemo2}></div>
     </div>
   );

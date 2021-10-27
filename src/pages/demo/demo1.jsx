@@ -15,7 +15,6 @@ const Demo1 = (props) => {
     if (PIXI.utils.isWebGLSupported()) {
       initFn();
     }
-    // initFn2();
   }, []);
   const initFn = () => {
     console.log('PIXI:', PIXI);
@@ -32,26 +31,9 @@ const Demo1 = (props) => {
     if (!pixiObj) {
       canvasDemo1.current.appendChild(app.view);
     }
-    // case1(app);
+    case1(app);
     // case2(app);
-    case3(app);
-  }
-  const initFn2 = () => {
-    const app = new PIXI.Application({
-      width: 1000,  // default: 800 宽度
-      height: 500,  // default: 800 宽度
-      antialias: true, //  default: false 反锯齿  使得字体的边界和图形更加平滑
-      backgroundAlpha: true, // 透明度
-      resolution: 1, // default: 1 分辨率  不同屏幕和分辨率适配
-      backgroundColor: 0xadeeda,
-      // powerPreference:"high-performance",
-      // forceCanvas: false //  default: false  阻止选择WebGL渲染器
-    });
-    setPixiObj(app);
-    if (!pixiObj) {
-      canvasDemo1.current.appendChild(app.view);
-    }
-    console.log('app:', app);
+    // case3(app);
   }
   // 创建图片并旋转
   const case1 = (app) => {
