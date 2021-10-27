@@ -12,9 +12,13 @@ const HomePage = (props) => {
     props.history.push(item.path);
   }
   return (
-    <div className='home-page'>{demoList?.map(item => <div key={item.path} className="home-page-item">
-      <Button type="primary" onClick={()=>toDetail(item)}>{item.meta.title}</Button>
-    </div>)}</div>
+    <div className='home-page'>
+      {demoList?.map(item =>
+        <div key={item.path} className="home-page-item">
+          <Button type="primary" onClick={()=>toDetail(item)}>{item.meta.title}</Button>
+        </div>
+      )}
+    </div>
   );
 }
 

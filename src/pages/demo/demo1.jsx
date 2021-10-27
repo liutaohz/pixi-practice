@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import * as PIXI from 'pixi.js';
+import { Button } from 'antd';
 import './index.less';
 
 const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
@@ -27,9 +28,9 @@ const Demo1 = (props) => {
     if (!pixiObj) {
       canvasDemo1.current.appendChild(app.view);
     }
-    case1(app);
-    // case2(app);
-    case3(app);
+    // case1(app);
+    case2(app);
+    // case3(app);
   }
   // 创建图片并旋转
   const case1 = (app) => {
@@ -100,9 +101,12 @@ const Demo1 = (props) => {
       }
     }
   }
+  const backHome = () => {
+    props.history.go(-1)
+  }
   return (
     <div className={'demo-page'}>
-      <div className={'demo-page-title'}>{props.meta.title}</div>
+      <div className={'demo-page-title'}><Button className="back-home" onClick={backHome}>返回</Button>{props.meta.title}</div>
       <div className="demo-canvas" ref={canvasDemo1}></div>
     </div>
   );

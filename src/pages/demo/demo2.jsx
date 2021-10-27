@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import * as PIXI from 'pixi.js';
+import { Button } from 'antd';
 import './index.less';
 
 const urlPr = 'https://timesky.oss-cn-hangzhou.aliyuncs.com/pixi/demo';
@@ -239,9 +240,12 @@ const Demo2 = (props) => {
     //`hit` will be either `true` or `false`
     return hit;
   };
+  const backHome = () => {
+    props.history.go(-1)
+  }
   return (
     <div className={'demo-page'}>
-      <div className={'demo-page-title'}>{props.meta.title}</div>
+      <div className={'demo-page-title'}><Button className="back-home" onClick={backHome}>返回</Button>{props.meta.title}</div>
       <div className="demo-canvas" ref={canvasDemo2}></div>
     </div>
   );

@@ -33,7 +33,7 @@ export const routesArr = [
 	{
 		path: `${prefixStr}/demo2`,
 		meta: {
-			title:'图形绘制，键盘交互'
+			title:'文本、图形绘制，键盘交互，碰撞检测'
 		},
 		component: Demo2
 	},
