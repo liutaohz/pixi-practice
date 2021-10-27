@@ -1,5 +1,5 @@
 # pixi-practice
-个人pixi.js学，手写小case;
+pixi.js，小demo;
 如果对你有所启发，欢迎给个Star⭐
 
 ### 项目启动
