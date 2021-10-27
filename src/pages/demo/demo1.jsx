@@ -10,8 +10,12 @@ const Demo1 = (props) => {
   const canvasDemo1 = useRef();
   useEffect(() => {
     window.document.title = props.meta.title;
-    // window.document.title = props.meta.title;
-    initFn();
+    // 特别说明：pixi.jsv5版本以上默认使用webgl渲染，如果希望可以回退到canvas，需要使用pixi.js-legacy
+    console.log('support WebGL:', PIXI.utils.isWebGLSupported())
+    if (PIXI.utils.isWebGLSupported()) {
+      initFn();
+    }
+    // initFn2();
   }, []);
   const initFn = () => {
     console.log('PIXI:', PIXI);
@@ -20,7 +24,7 @@ const Demo1 = (props) => {
       width: 1000,  // default: 800 宽度
       height: 500,  // default: 800 宽度
       antialias: true, //  default: false 反锯齿  使得字体的边界和图形更加平滑
-      transparent: false, // default: false 透明度
+      backgroundAlpha: true, // 透明度
       resolution: 1, // default: 1 分辨率  不同屏幕和分辨率适配
       backgroundColor: 0xadeeda
     });
@@ -28,9 +32,26 @@ const Demo1 = (props) => {
     if (!pixiObj) {
       canvasDemo1.current.appendChild(app.view);
     }
-    // case1(app);
-    case2(app);
+    case1(app);
+    // case2(app);
     // case3(app);
+  }
+  const initFn2 = () => {
+    const app = new PIXI.Application({
+      width: 1000,  // default: 800 宽度
+      height: 500,  // default: 800 宽度
+      antialias: true, //  default: false 反锯齿  使得字体的边界和图形更加平滑
+      backgroundAlpha: true, // 透明度
+      resolution: 1, // default: 1 分辨率  不同屏幕和分辨率适配
+      backgroundColor: 0xadeeda,
+      // powerPreference:"high-performance",
+      // forceCanvas: false //  default: false  阻止选择WebGL渲染器
+    });
+    setPixiObj(app);
+    if (!pixiObj) {
+      canvasDemo1.current.appendChild(app.view);
+    }
+    console.log('app:', app);
   }
   // 创建图片并旋转
   const case1 = (app) => {
@@ -102,14 +123,17 @@ const Demo1 = (props) => {
     }
   }
   const backHome = () => {
-    props.history.go(-1)
+    props.history.push('/pixi-practice')
   }
   return (
     <div className={'demo-page'}>
       <div className={'demo-page-title'}>
         {props.meta.title} <Button className="back-home" onClick={backHome}>返回首页</Button>
       </div>
-      <div className="demo-canvas" ref={canvasDemo1}></div>
+      {PIXI.utils.isWebGLSupported() ?
+        <div className="demo-canvas" ref={canvasDemo1}></div> :
+        <div className="demo-canvas" ref={canvasDemo1}>浏览器暂不支持webgl</div>
+      }
     </div>
   );
 }

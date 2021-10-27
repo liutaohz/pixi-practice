@@ -17,7 +17,7 @@ const Demo4 = (props) => {
       width: 1000,  // default: 800 宽度
       height: 600,  // default: 800 宽度
       antialias: true, //  default: false 反锯齿  使得字体的边界和图形更加平滑
-      transparent: false, // default: false 透明度
+      backgroundAlpha: true,
       resolution: 1, // default: 1 分辨率  不同屏幕和分辨率适配
       backgroundColor: 0xadeeda
     });
@@ -73,7 +73,7 @@ const Demo4 = (props) => {
     return array
   }
   const backHome = () => {
-    props.history.go(-1)
+    props.history.push('/pixi-practice')
   }
   return (
     <div className={'demo-page'}>
