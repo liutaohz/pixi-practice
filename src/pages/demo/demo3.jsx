@@ -25,8 +25,8 @@ const Demo3 = (props) => {
     if (!pixiObj) {
       canvasDemo3.current.appendChild(app.view);
     }
-    case1(app);
-    // case2(app);
+    // case1(app);
+    case2(app);
   }
   // 平铺背景图
   const case1 = (app) => {
@@ -59,10 +59,12 @@ const Demo3 = (props) => {
   }
   // 多平铺背景图，伪3D效果
   const case2 = (app) => {
-    const wood = PIXI.Texture.from('/images/wood.jpg')
+    // const wood = PIXI.Texture.from('/images/wood.jpg')
+    const wood = PIXI.Texture.from(`${urlPr}/wood.jpg`)
     const tilingSprite1 = new PIXI.TilingSprite(wood, app.screen.width, 500)
     app.stage.addChild(tilingSprite1)
-    const ground = PIXI.Texture.from('/images/ground.png')
+    // const ground = PIXI.Texture.from('/images/ground.png')
+    const ground = PIXI.Texture.from(`${urlPr}/ground.png`)
     const tilingSprite2 = new PIXI.TilingSprite(ground, app.screen.width, 150)
     tilingSprite2.y = 450;
     app.stage.addChild(tilingSprite2)

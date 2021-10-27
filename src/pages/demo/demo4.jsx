@@ -30,10 +30,12 @@ const Demo4 = (props) => {
   }
   // 平铺背景图
   const case1 = (app) => {
-    app.loader.add(`/images/testMan.json`)
+    // app.loader.add(`/images/testMan.json`)
+    app.loader.add(`${urlPr}/testMan.json`)
       .load(setup);
     function setup() {
-      let ids = app.loader.resources[`/images/testMan.json`].textures;
+      // let ids = app.loader.resources[`/images/testMan.json`].textures;
+      const ids = app.loader.resources[`${urlPr}/testMan.json`].textures;
       let pixie1 = new PIXI.AnimatedSprite(countImgList(ids,0,3));
       pixie1.position.set(100, 100)
       pixie1.animationSpeed = 0.1;
